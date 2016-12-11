@@ -6,6 +6,7 @@ import { renderToString } from 'react-dom/server';
 import { ServerRouter, createServerRenderContext } from 'react-router';
 import { CodeSplitProvider, createRenderContext } from 'code-split-component';
 import Helmet from 'react-helmet';
+import { renderStatic } from 'glamor/server';
 import generateHTML from './generateHTML';
 import App from '../../../shared/components/App';
 import envConfig from '../../../../config/private/environment';
@@ -55,10 +56,17 @@ function reactApplicationMiddleware(request: $Request, response: $Response) {
     </CodeSplitProvider>,
   );
 
+  // hydrate glamor styles
+  let { css, ids } = renderStatic(() => app);
+
   // Generate the html response.
   const html = generateHTML({
     // Provide the full app react element.
     app,
+    // server-side generated glamor styles
+    css,
+    // server-side generated glamor ids
+    ids,
     // Nonce which allows us to safely declare inline scripts.
     nonce,
     // Running this gets all the helmet properties (e.g. headers/scripts/title etc)
