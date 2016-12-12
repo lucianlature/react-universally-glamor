@@ -9,7 +9,7 @@ const headerStyles = css`
   text-align: center;
   margin-bottom: 1rem;
   background-color: #FBEEE6;
-`
+`;
 
 function Header() {
   return (
