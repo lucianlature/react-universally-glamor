@@ -9,7 +9,7 @@ const menuStyles = css`
   margin-top: 1rem;
   margin-bottom: 1rem;
   background-color: #EBEDEF;
-`
+`;
 
 function Menu() {
   return (

@@ -45,7 +45,8 @@
     "Evgeny Boxer",
     "Alin Porumb",
     "David Edmondson",
-    "Lucian Lature <lucian.lature@gmail.com>"
+    "Lucian Lature <lucian.lature@gmail.com>",
+    "Christoph Werner <christoph@codepunkt.de>"
   ],
   "license": "MIT",
   "bugs": {
@@ -54,7 +55,7 @@
   "homepage": "https://github.com/ctrlplusb/react-universally#readme",
   "dependencies": {
     "app-root-dir": "1.0.2",
-    "code-split-component": "2.0.0-alpha.2",
+    "code-split-component": "2.0.0-alpha.4",
     "colors": "1.1.2",
     "compression": "1.6.2",
     "dotenv": "2.0.0",
@@ -62,7 +63,6 @@
     "glamor": "2.20.12",
     "helmet": "3.1.0",
     "hpp": "0.2.1",
-    "normalize.css": "5.0.0",
     "offline-plugin": "4.5.3",
     "react": "15.4.1",
     "react-dom": "15.4.1",
